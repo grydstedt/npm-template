@@ -1,7 +1,10 @@
 generator:
 	npm install
 	git init
-	git add -A
 	git remote add origin https://thisandagain@github.com/thisandagain/__name__
 
-.PHONY: generator
+test:
+	tap test/governance/*.js
+	tap test/functional/*.js
+
+.PHONY: generator test
